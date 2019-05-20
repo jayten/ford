@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block body %}
       <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
+      <div class="jumbotron jumbotron-fluid">
         {{ summary }}
         	 {% if project_github or project_bitbucket or project_sourceforge or project_website %}
-	<p> Find us on&hellip;</p>
+	<!--p> Find us on&hellip;</p-->
         <p>
         	 {% if project_github %}
           <a class="btn btn-lg btn-primary" href="{{ project_github }}" role="button">GitHub</a>
@@ -37,12 +37,22 @@
 		  {% if author %}
         <div class="col-md-4">
 	  <div class="well">
-          <h2>Developer Info</h2>
-          <h4>{{ author }}</h4>
+          <h2>FEST-3D Team</h2>
           {% if author_pic %}
      		 <img src="{{ author_pic }}" alt="Developer picture" class="img-thumbnail">
     		 {% endif %}
           {{ author_description }}
+          <h4>Developers</h4>
+          <ul>
+            <li> <a href="https://www.jatinderpal.com">Jatinder Pal Singh Sandhu</a></li>
+            <li> R. D. Teja</li>
+            <li> Rakesh Ramakrishnan</li>
+            <li> Anant Girdhar</li>
+          </ul>
+          <h4>Advisor</h4>
+           <ul>
+             <li> <a href="https://sites.google.com/view/santanu-ghosh-ae-iitm/home?authuser=2">Dr. Santanu Ghosh</a></li>
+           </ul>
 			   {% if github or bitbucket or facebook or twitter or google_plus or linkedin or email or website %}
             <div class="text-center"><div class="btn-group" role="group">
               {% if email %}
